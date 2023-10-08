@@ -1,3 +1,19 @@
 {
-    "python.analysis.typeCheckingMode": "off"
+    "python.analysis.typeCheckingMode": "off",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#306998",
+        "statusBarItem.hoverBackground": "#306998",
+        "statusBarItem.remoteBackground": "#FFD43B",
+        "statusBarItem.remoteForeground": "#306998",
+        "activityBar.background": "#306998",
+        "activityBar.foreground": "#FFD43B",
+        "statusBar.foreground": "#FFD43B",
+        "activityBar.inactiveForeground": "#FFD43B",
+        "activityBarBadge.background": "#494949",
+        "activityBarBadge.foreground": "#FFD43B",
+        "titleBar.activeBackground": "#306998",
+        "titleBar.inactiveBackground": "#306998",
+        "titleBar.activeForeground": "#FFD43B",
+        "titleBar.inactiveForeground": "#FFD43B",
+    }
 }

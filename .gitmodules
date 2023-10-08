@@ -1,0 +1,3 @@
+[submodule "gameboy-neat"]
+	path = gameboy-neat
+	url = git@github.com:DornelesArthur/gameboy-neat.git
