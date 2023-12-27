@@ -9,9 +9,22 @@ try:
 
     print("Your guess is: ", guess)
 
-    if(secret_number == guess):
+    correct = secret_number == guess
+    higher = secret_number > guess
+    if(correct):
         print("You have guess correctly")
     else:
-        print("You have guess wrong")
+        if (higher):
+            print("The secret number is higher than ", guess)
+        else:
+            print("The secret number is lower than ", guess)
+
+        guess = int(input("You have a second chance. Guess again: "))
+        correct = secret_number == guess
+        if(correct):
+            print("You have guess correctly")
+        else:
+            print("You have guess wrong")
+
 except ValueError:
     print("Only numbers are accepted!")
