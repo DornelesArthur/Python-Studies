@@ -1,12 +1,16 @@
 import random as r
+
 print("****************************")
 print("Welcome to guess the number!")
 print("****************************")
 
 secret_number = r.randrange(1,101)
-number_chances = 4
+number_chances_difficulties = [6,5,4]
 
 try:
+    print("(0) Easy\n(1) Medium\n(2) Hard")
+    difficulty = int(input("Choose a difficulty:"))
+    number_chances = number_chances_difficulties[difficulty]
     while (number_chances):
         guess = int(input(f"Guess the number ({number_chances} chances left): "))
 
