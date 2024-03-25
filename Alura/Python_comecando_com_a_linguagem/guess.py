@@ -3,7 +3,7 @@ print("****************************")
 print("Welcome to guess the number!")
 print("****************************")
 
-secret_number = r.randrange(1,100)
+secret_number = r.randrange(1,101)
 number_chances = 4
 
 try:
