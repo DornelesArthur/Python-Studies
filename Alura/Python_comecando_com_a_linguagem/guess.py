@@ -1,8 +1,9 @@
+import random as r
 print("****************************")
 print("Welcome to guess the number!")
 print("****************************")
 
-secret_number = 42
+secret_number = r.randrange(1,100)
 number_chances = 4
 
 try:
@@ -23,5 +24,6 @@ try:
                 print("The secret number is lower than ", guess)
             number_chances-=1
     print("Game has ended")
+    print(f"The right number was: {secret_number}")
 except ValueError:
     print("Only numbers are accepted!")
