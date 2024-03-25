@@ -5,12 +5,18 @@ print("Welcome to guess the number!")
 print("****************************")
 
 secret_number = r.randrange(1,101)
-number_chances_difficulties = [6,5,4]
-
+number_chances_difficulties = [8,6,4]
+choose_diff = True
 try:
-    print("(0) Easy\n(1) Medium\n(2) Hard")
-    difficulty = int(input("Choose a difficulty:"))
-    number_chances = number_chances_difficulties[difficulty]
+    while choose_diff:
+        print("(0) Easy\n(1) Medium\n(2) Hard")
+        difficulty = int(input("Choose a difficulty:"))
+        try:
+            number_chances = number_chances_difficulties[difficulty]
+            choose_diff = False
+        except IndexError:
+            print("Invalid value!")
+
     while (number_chances):
         guess = int(input(f"Guess the number ({number_chances} chances left): "))
 
@@ -28,6 +34,7 @@ try:
                 print("The secret number is lower than ", guess)
             number_chances-=1
     print("Game has ended")
-    print(f"The right number was: {secret_number}")
+    if(not correct):
+        print(f"The right number was: {secret_number}")
 except ValueError:
     print("Only numbers are accepted!")
